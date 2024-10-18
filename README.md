@@ -6,7 +6,7 @@
 
 # 📝 Desafio MW Soluções
 
-<p align="center"> Dashboard desenvolvido para o desafio proposto pela MW Soluções </p>
+<p align="center"> Dashboard desenvolvido para o desafio proposto pela MW Soluções, utilizando Python, Docker e Git, seguindo os conventional commits para organização e entendimento de escalabilidade do código. </p>
 
 <h2 align="center">
   <img src="https://img.shields.io/badge/web%3F-ok-blue?style=for-the-badge" alt="Sistema web Ok" />
