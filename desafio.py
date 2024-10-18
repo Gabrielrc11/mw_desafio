@@ -20,7 +20,7 @@ params = {
 }
 response = requests.get(url, params=params)
 resultado = pd.DataFrame(response.json()['dataset'])
-resultado.to_csv('./resultados/online.csv', index=False, header=False)
+resultado.to_csv('./resultados/online.csv', index=False, header=True)
 
 #Clientes offline por cidade
 params = {
@@ -28,15 +28,15 @@ params = {
 }
 response = requests.get(url, params=params)
 resultado = pd.DataFrame(response.json()['dataset'])
-resultado.to_csv('./resultados/offline.csv', index=False, header=False)
+resultado.to_csv('./resultados/offline.csv', index=False, header=True)
 
 #Clientes por plano
 params = {
-    "query": "SELECT planoContrato, COUNT(*) AS total_clientes FROM dados ORDER BY total_clientes DESC;"
+    "query": "SELECT planoContrato, COUNT(*) AS total_clientes FROM dados ORDER BY total_clientes DESC LIMIT 10;"
 }
 response = requests.get(url, params=params)
 resultado = pd.DataFrame(response.json()['dataset'])
-resultado.to_csv('./resultados/plano.csv', index=False, header=False)
+resultado.to_csv('./resultados/plano.csv', index=False, header=True)
 
 #Clientes por status
 params = {
@@ -44,7 +44,7 @@ params = {
 }
 response = requests.get(url, params=params)
 resultado = pd.DataFrame(response.json()['dataset'])
-resultado.to_csv('./resultados/status.csv', index=False, header=False)
+resultado.to_csv('./resultados/status.csv', index=False, header=True)
 
 #Clientes por valor do plano
 params = {
@@ -52,4 +52,4 @@ params = {
 }
 response = requests.get(url, params=params)
 resultado = pd.DataFrame(response.json()['dataset'])
-resultado.to_csv('./resultados/valor.csv', index=False, header=False)
+resultado.to_csv('./resultados/valor.csv', index=False, header=True)
